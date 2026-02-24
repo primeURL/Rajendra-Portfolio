@@ -9,8 +9,8 @@ interface Props {
 }
 
 const {
-  title = "TaxPro Solutions - Professional Tax & Form Filing",
-  description = "Expert assistance with Income Tax Returns, Government Forms, and Legal Documentation. Simplifying your tax and form filing needs with certified professionals.",
+  title = "Fill Income Tax Online | UDISE+ | MahaIT Portal | Government Forms - TaxPro Solutions",
+  description = "Fill income tax online, UDISE+ portal, MahaIT portal, and all government forms with expert assistance. Professional online form filling services for ITR, Saral certificates, GST, and Maharashtra government portals. Fast, accurate, and hassle-free.",
   image = "/og-image.jpg",
   noindex = false,
   canonical,
@@ -73,10 +73,12 @@ const imageURL = new URL(image, siteUrl).toString();
 <!-- Additional SEO Meta Tags -->
 <meta
   name="keywords"
-  content="tax filing, income tax returns, ITR filing, government forms, legal documentation, tax consultant, form filing services, professional tax help, certified tax professional"
+  content="fill income tax online, income tax filing online, ITR filing online, fill UDISE+ online, UDISE portal, fill MahaIT portal online, Maharashtra IT portal, online tax filing, government form filling online, Saral portal services, certificate online application, income certificate online, caste certificate online, domicile certificate online, tax consultant near me, professional tax filing, GST registration online, business registration online, legal documentation services, government certificate services Maharashtra, online form filling services, tax return filing, ITR-1 filing, ITR-2 filing, tax planning services, government portal assistance"
 />
 <meta name="author" content="TaxPro Solutions" />
 <meta name="language" content="English" />
+<meta name="geo.region" content="IN-MH" />
+<meta name="geo.placename" content="Maharashtra, India" />
 <meta name="revisit-after" content="7 days" />
 <meta name="distribution" content="global" />
 <meta name="rating" content="general" />
@@ -91,48 +93,135 @@ const imageURL = new URL(image, siteUrl).toString();
 />
 <meta name="apple-mobile-web-app-title" content="TaxPro Solutions" />
 
-<!-- Structured Data (JSON-LD) -->
-<script
-  type="application/ld+json"
-  set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "TaxPro Solutions",
-    alternateName: "TaxPro",
-    url: siteUrl,
-    description: description,
-    image: imageURL,
-    priceRange: "$$",
-    areaServed: {
+<!-- Structured Data (JSON-LD) - Professional Service -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "TaxPro Solutions - Online Form Filling Services",
+  alternateName: "TaxPro",
+  url: siteUrl,
+  description: "Professional online form filling services for income tax, UDISE+, MahaIT portal, Saral certificates, and all government forms in Maharashtra",
+  image: imageURL,
+  priceRange: "₹₹",
+  areaServed: [
+    {
+      "@type": "State",
+      name: "Maharashtra"
+    },
+    {
       "@type": "Country",
-      name: "India",
-    },
-    serviceType: [
-      "Income Tax Filing",
-      "Government Form Filing",
-      "Legal Documentation",
-      "Tax Consultation",
-    ],
-    founder: {
-      "@type": "Person",
-      name: "TaxPro Solutions",
-    },
-  })}
-/>
+      name: "India"
+    }
+  ],
+  serviceType: [
+    "Income Tax Filing Online",
+    "ITR Filing Services",
+    "UDISE+ Portal Assistance",
+    "MahaIT Portal Services",
+    "Saral Portal Certificate Services",
+    "Government Form Filing",
+    "GST Registration Online",
+    "Legal Documentation",
+    "Tax Consultation",
+    "Caste Certificate Online",
+    "Income Certificate Online",
+    "Domicile Certificate Online"
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Government Form Filling Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Fill Income Tax Online",
+          description: "Complete ITR filing online for individuals and businesses"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "UDISE+ Portal Services",
+          description: "UDISE+ online form filling and portal assistance"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "MahaIT Portal Services",
+          description: "Maharashtra IT portal online form filling services"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Saral Certificate Services",
+          description: "Online application for caste, income, domicile certificates through Saral portal"
+        }
+      }
+    ]
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "500"
+  }
+})} />
 
 <!-- Organization Structured Data -->
-<script
-  type="application/ld+json"
-  set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "TaxPro Solutions",
-    url: siteUrl,
-    logo: new URL("/favicon.svg", siteUrl).toString(),
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "Customer Support",
-      email: "contact@taxprosolutions.com",
+<script is:inline type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "TaxPro Solutions",
+  url: siteUrl,
+  logo: new URL("/favicon.svg", siteUrl).toString(),
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Customer Support",
+    email: "contact@taxprosolutions.com"
+  }
+})} />
+
+<!-- FAQ Structured Data -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How to fill income tax online?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can fill income tax online through our professional ITR filing services. We assist with all ITR forms (ITR-1 to ITR-7), ensure maximum deductions, and handle complete tax compliance for individuals and businesses."
+      }
     },
-  })}
-/>
+    {
+      "@type": "Question",
+      name: "How to fill UDISE+ portal online?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We provide complete UDISE+ portal assistance for online form filling. Our experts help you navigate the UDISE portal and complete all required educational institution registrations and data submissions."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How to fill MahaIT portal online?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our team provides expert assistance for Maharashtra IT portal (MahaIT) online form filling services. We help with all government applications and submissions through the MahaIT portal."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How to apply for certificates through Saral portal?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer complete Saral portal services for online certificate applications including caste certificates, income certificates, domicile certificates, and other Maharashtra government certificates. Fast and hassle-free processing."
+      }
+    }
+  ]
+})} />
