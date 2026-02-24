@@ -1,0 +1,120 @@
+---
+import { translations } from "../i18n/translations";
+---
+
+<script id="i18n-data" type="application/json" set:html={JSON.stringify(translations)}></script>
+
+<script is:inline>
+  if (typeof window.i18nInitialized === "undefined") {
+    window.i18nInitialized = true;
+
+    function getTranslations() {
+      const el = document.getElementById("i18n-data");
+      if (!el) return null;
+      try {
+        return JSON.parse(el.textContent || "{}");
+      } catch {
+        return null;
+      }
+    }
+
+    function getCurrentLang() {
+      return localStorage.getItem("lang") || "en";
+    }
+
+    function applyTranslations(lang) {
+      const allTranslations = getTranslations();
+      if (!allTranslations || !allTranslations[lang]) return;
+
+      const t = allTranslations[lang];
+
+      // Update text content
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        var key = el.getAttribute("data-i18n");
+        if (key && t[key] !== undefined) {
+          el.textContent = t[key];
+        }
+      });
+
+      // Update HTML content (for elements with mixed content like spans)
+      document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+        var key = el.getAttribute("data-i18n-html");
+        if (key && t[key] !== undefined) {
+          el.innerHTML = t[key];
+        }
+      });
+
+      // Update placeholders
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
+        var key = el.getAttribute("data-i18n-placeholder");
+        if (key && t[key] !== undefined) {
+          el.setAttribute("placeholder", t[key]);
+        }
+      });
+
+      // Update html lang attribute
+      document.documentElement.setAttribute("lang", lang);
+
+      // Update active button states
+      document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
+        var btnLang = btn.getAttribute("data-lang-btn");
+        if (btnLang === lang) {
+          btn.classList.add("bg-primary", "text-white");
+          btn.classList.remove("text-slate-600", "dark:text-slate-300", "hover:text-primary", "hover:bg-slate-100", "dark:hover:bg-white/5");
+        } else {
+          btn.classList.remove("bg-primary", "text-white");
+          btn.classList.add("text-slate-600", "dark:text-slate-300", "hover:text-primary", "hover:bg-slate-100", "dark:hover:bg-white/5");
+        }
+      });
+
+      localStorage.setItem("lang", lang);
+    }
+
+    function switchLang(lang) {
+      applyTranslations(lang);
+    }
+
+    // Global listener for lang buttons
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-lang-btn]");
+      if (btn) {
+        var lang = btn.getAttribute("data-lang-btn");
+        if (lang) switchLang(lang);
+      }
+    });
+
+    // Apply saved language on load
+    var savedLang = getCurrentLang();
+    if (savedLang !== "en") {
+      // Wait for DOM to be ready
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", function () {
+          applyTranslations(savedLang);
+        });
+      } else {
+        applyTranslations(savedLang);
+      }
+    } else {
+      // Still update button states for English
+      var updateButtons = function () {
+        document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
+          var btnLang = btn.getAttribute("data-lang-btn");
+          if (btnLang === "en") {
+            btn.classList.add("bg-primary", "text-white");
+            btn.classList.remove("text-slate-600", "dark:text-slate-300", "hover:text-primary", "hover:bg-slate-100", "dark:hover:bg-white/5");
+          }
+        });
+      };
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", updateButtons);
+      } else {
+        updateButtons();
+      }
+    }
+
+    // Handle Astro View Transitions
+    document.addEventListener("astro:after-swap", function () {
+      applyTranslations(getCurrentLang());
+    });
+  }
+</script>

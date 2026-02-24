@@ -16,6 +16,14 @@
   .dark .glass-panel {
     @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
   }
+
+  .glass-card {
+    @apply bg-white/85 backdrop-blur-sm;
+  }
+
+  .dark .glass-card {
+    @apply bg-slate-900/85 backdrop-blur-sm;
+  }
 }
 
 /* Custom scrollbar */

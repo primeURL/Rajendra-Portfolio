@@ -5,6 +5,7 @@ import Features from "../components/Features.astro";
 import HowItWorks from "../components/HowItWorks.astro";
 import CTA from "../components/CTA.astro";
 import ThemeToggle from "../components/ThemeToggle.astro";
+import LanguageSwitcher from "../components/LanguageSwitcher.astro";
 ---
 
 <Layout
@@ -23,16 +24,20 @@ import ThemeToggle from "../components/ThemeToggle.astro";
 
       <div class="hidden lg:flex items-center gap-8">
         <nav class="flex items-center gap-6">
-          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#services">Services</a>
-          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
-          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
-          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#services" data-i18n="nav.services">Services</a>
+          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#about" data-i18n="nav.about">About</a>
+          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#testimonials" data-i18n="nav.testimonials">Testimonials</a>
+          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="h-6 w-px bg-slate-200 dark:bg-slate-700"></div>
         <ThemeToggle />
-        <a class="text-slate-900 dark:text-white text-sm font-bold hover:text-primary transition-colors" href="#">EN | MR | HI</a>
+        <div class="flex items-center gap-1 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden">
+          <button data-lang-btn="en" class="px-2.5 py-1.5 text-xs font-bold transition-colors rounded-md bg-primary text-white">EN</button>
+          <button data-lang-btn="mr" class="px-2.5 py-1.5 text-xs font-bold transition-colors rounded-md text-slate-600 dark:text-slate-300 hover:text-primary hover:bg-slate-100 dark:hover:bg-white/5">MR</button>
+          <button data-lang-btn="hi" class="px-2.5 py-1.5 text-xs font-bold transition-colors rounded-md text-slate-600 dark:text-slate-300 hover:text-primary hover:bg-slate-100 dark:hover:bg-white/5">HI</button>
+        </div>
         <button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-colors shadow-md shadow-primary/20">
-          <span>Get Started</span>
+          <span data-i18n="nav.getStarted">Get Started</span>
         </button>
       </div>
 
@@ -48,15 +53,19 @@ import ThemeToggle from "../components/ThemeToggle.astro";
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
       <nav class="flex flex-col px-6 py-4 space-y-3">
-        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#services">Services</a>
-        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#about">About</a>
-        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#testimonials">Testimonials</a>
-        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#contact">Contact</a>
+        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#services" data-i18n="nav.services">Services</a>
+        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#about" data-i18n="nav.about">About</a>
+        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#testimonials" data-i18n="nav.testimonials">Testimonials</a>
+        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#contact" data-i18n="nav.contact">Contact</a>
         <div class="pt-2 border-t border-slate-200 dark:border-slate-700">
-          <a class="text-slate-900 dark:text-white text-sm font-bold" href="#">EN | MR | HI</a>
+          <div class="flex items-center gap-1 rounded-lg border border-slate-200 dark:border-slate-700 overflow-hidden w-fit">
+            <button data-lang-btn="en" class="px-3 py-1.5 text-xs font-bold transition-colors rounded-md bg-primary text-white">EN</button>
+            <button data-lang-btn="mr" class="px-3 py-1.5 text-xs font-bold transition-colors rounded-md text-slate-600 dark:text-slate-300 hover:text-primary hover:bg-slate-100 dark:hover:bg-white/5">MR</button>
+            <button data-lang-btn="hi" class="px-3 py-1.5 text-xs font-bold transition-colors rounded-md text-slate-600 dark:text-slate-300 hover:text-primary hover:bg-slate-100 dark:hover:bg-white/5">HI</button>
+          </div>
         </div>
         <button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-colors shadow-md shadow-primary/20 mt-2">
-          <span>Get Started</span>
+          <span data-i18n="nav.getStarted">Get Started</span>
         </button>
       </nav>
     </div>
@@ -70,6 +79,8 @@ import ThemeToggle from "../components/ThemeToggle.astro";
   </main>
 
   <CTA />
+
+  <LanguageSwitcher />
 
   <script>
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
