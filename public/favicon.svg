@@ -1,23 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
   <!-- Background -->
-  <rect x="1" y="1" width="30" height="30" rx="7" fill="#2563EB"/>
-
-  <!-- Rising line -->
-  <path
-    d="M7 19 L12 14 L16 17 L23 10"
-    stroke="white"
-    stroke-width="2.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-
-  <!-- Main sparkle -->
-  <path
-    d="M16 6 L17 8 L19 9 L17 10 L16 12 L15 10 L13 9 L15 8 Z"
+  <rect x="0" y="0" width="32" height="32" rx="8" fill="url(#grad)"/>
+  
+  <!-- Stylized Government/Bank Icon (Similar to account_balance) -->
+  <path 
+    d="M4 26h24v-2H4v2zm2-4h4v-9H6v9zm7 0h4v-9h-4v9zm7 0h4v-9h-4v9zM4 11h24V9L16 4 4 9v2z" 
     fill="white"
   />
-
-  <!-- Small stars -->
-  <circle cx="21.5" cy="13" r="1.1" fill="white" />
-  <circle cx="19" cy="15.5" r="0.9" fill="white" />
 </svg>
