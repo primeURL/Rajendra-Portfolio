@@ -1,0 +1,100 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import CTA from "../components/CTA.astro";
+import ThemeToggle from "../components/ThemeToggle.astro";
+---
+
+<Layout
+  title="TaxPro Solutions - Professional Tax & Form Filing"
+  description="Expert assistance with Income Tax Returns, Government Forms, and Legal Documentation. We handle the paperwork so you can focus on what truly matters."
+>
+  <!-- Sticky Navbar -->
+  <div class="sticky top-0 z-50 w-full bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 shadow-sm">
+    <header class="flex items-center justify-between whitespace-nowrap px-6 py-4 max-w-7xl mx-auto">
+      <a href="/" class="flex items-center gap-3 text-slate-900 dark:text-white">
+        <div class="size-8 text-primary">
+          <span class="material-symbols-outlined text-3xl">account_balance</span>
+        </div>
+        <h2 class="text-xl font-bold leading-tight tracking-tight">TaxPro Solutions</h2>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-8">
+        <nav class="flex items-center gap-6">
+          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#services">Services</a>
+          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
+          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#testimonials">Testimonials</a>
+          <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+        </nav>
+        <div class="h-6 w-px bg-slate-200 dark:bg-slate-700"></div>
+        <ThemeToggle />
+        <a class="text-slate-900 dark:text-white text-sm font-bold hover:text-primary transition-colors" href="#">EN | MR | HI</a>
+        <button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-colors shadow-md shadow-primary/20">
+          <span>Get Started</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <ThemeToggle />
+        <button id="mobile-menu-btn" class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg transition-colors">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark">
+      <nav class="flex flex-col px-6 py-4 space-y-3">
+        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#services">Services</a>
+        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#about">About</a>
+        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#testimonials">Testimonials</a>
+        <a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors py-2" href="#contact">Contact</a>
+        <div class="pt-2 border-t border-slate-200 dark:border-slate-700">
+          <a class="text-slate-900 dark:text-white text-sm font-bold" href="#">EN | MR | HI</a>
+        </div>
+        <button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-colors shadow-md shadow-primary/20 mt-2">
+          <span>Get Started</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <Hero />
+    <Features />
+    <HowItWorks />
+  </main>
+
+  <CTA />
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+    });
+
+    const mobileMenuLinks = mobileMenu?.querySelectorAll('a');
+    mobileMenuLinks?.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu?.classList.add('hidden');
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e: Event) {
+        e.preventDefault();
+        const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+        const target = document.querySelector(href || '');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</Layout>

@@ -1,0 +1,31 @@
+---
+// Redirect to the external dashboard URL
+// This page handles local development redirection from localhost:4321/dashboard -> localhost:3000/dashboard
+// In production, Nginx handles this routing before it hits Astro.
+
+const dashboardUrl = import.meta.env.PUBLIC_DASHBOARD_URL || 'http://localhost:3000';
+// Ensure we don't double-slash if the env var already has the path, though .env says it is just the base
+const targetUrl = dashboardUrl.endsWith('/dashboard') ? dashboardUrl : `${dashboardUrl}/dashboard`;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Dashboard...</title>
+    <!-- Meta refresh for non-JS context -->
+    <meta http-equiv="refresh" content={`0;url=${targetUrl}`} />
+</head>
+<body style="background-color: #020617; color: #f8fafc; font-family: ui-sans-serif, system-ui, sans-serif; height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0;">
+    <div style="text-align: center;">
+        <p style="font-size: 1.125rem; line-height: 1.75rem;">Redirecting to dashboard...</p>
+        <p style="font-size: 0.875rem; line-height: 1.25rem; color: #94a3b8; margin-top: 0.5rem;">
+            If you are not redirected automatically, <a href={targetUrl} style="color: #818cf8; text-decoration: underline;">click here</a>.
+        </p>
+    </div>
+    
+    <script define:vars={{ targetUrl }}>
+        window.location.href = targetUrl;
+    </script>
+</body>
+</html>

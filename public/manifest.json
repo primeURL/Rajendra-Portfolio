@@ -1,0 +1,24 @@
+{
+  "name": "Flowvy",
+  "short_name": "Flowvy",
+  "description": "Prepare smarter for anything with Flowvy. Build structured study plans, track progress, organize notes, and stay consistent. Stop guessing what to study, start mastering with clarity",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F1A",
+  "theme_color": "#2513ec",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "lang": "en-US",
+  "dir": "ltr"
+}

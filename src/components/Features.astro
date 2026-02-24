@@ -1,0 +1,74 @@
+---
+const stats = [
+  {
+    icon: "description",
+    label: "Forms Filled",
+    value: "1,000+",
+  },
+  {
+    icon: "sentiment_satisfied",
+    label: "Happy Clients",
+    value: "500+",
+  },
+  {
+    icon: "history",
+    label: "Years Experience",
+    value: "10+",
+  },
+];
+
+const features = [
+  {
+    icon: "school",
+    title: "Expert Knowledge",
+    description: "Stay compliant with up-to-date knowledge of the latest tax laws and ever-changing government regulations.",
+  },
+  {
+    icon: "schedule",
+    title: "Timely Filing",
+    description: "Never miss a critical deadline again. We ensure prompt submission of all your documents and returns.",
+  },
+  {
+    icon: "lock",
+    title: "Confidentiality Guaranteed",
+    description: "Your personal and financial data is handled with the highest level of security and discretion.",
+  },
+];
+---
+
+<!-- Stats Section -->
+<section id="about" class="py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    {stats.map((stat) => (
+      <div class="flex flex-col items-center sm:items-start p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+        <div class="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl text-primary mb-4">
+          <span class="material-symbols-outlined text-3xl">{stat.icon}</span>
+        </div>
+        <p class="text-slate-500 dark:text-slate-400 text-sm font-medium uppercase tracking-wide">{stat.label}</p>
+        <p class="text-slate-900 dark:text-white text-3xl font-black mt-1">{stat.value}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- Features Grid -->
+<!-- <section class="py-16">
+  <div class="text-center max-w-3xl mx-auto mb-12">
+    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Why Choose Us?</h2>
+    <p class="text-slate-600 dark:text-slate-300">Reliable, accurate, and confidential services tailored to your specific financial needs.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {features.map((feature) => (
+      <div class="group p-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary/50 transition-colors">
+        <div class="size-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-6">
+          <span class="material-symbols-outlined text-2xl">{feature.icon}</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">{feature.title}</h3>
+        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+          {feature.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</section> -->
