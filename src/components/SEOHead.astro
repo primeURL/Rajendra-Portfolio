@@ -225,3 +225,124 @@ const imageURL = new URL(image, siteUrl).toString();
     }
   ]
 })} />
+
+
+<!-- WebSite Structured Data for Sitelinks Search Box -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "TaxPro Solutions",
+  alternateName: "TaxPro",
+  url: siteUrl,
+  description: "Professional online form filling services for income tax, UDISE+, MahaIT portal, and government certificates",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: siteUrl + "/?s={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+})} />
+
+<!-- BreadcrumbList Structured Data -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteUrl
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Services",
+      item: siteUrl + "#services"
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "About",
+      item: siteUrl + "#about"
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Contact",
+      item: siteUrl + "#contact"
+    }
+  ]
+})} />
+
+<!-- ItemList for Services (helps Google understand your offerings) -->
+<script is:inline type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "TaxPro Services",
+  description: "Complete list of professional services offered",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Service",
+        name: "Income Tax Filing Online",
+        description: "Complete ITR filing services for individuals and businesses",
+        url: siteUrl + "#services"
+      }
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Service",
+        name: "UDISE+ Portal Services",
+        description: "UDISE+ online form filling and portal assistance",
+        url: siteUrl + "#services"
+      }
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Service",
+        name: "MahaIT Portal Services",
+        description: "Maharashtra IT portal online form filling",
+        url: siteUrl + "#services"
+      }
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "Service",
+        name: "Saral Certificate Services",
+        description: "Online certificate applications through Saral portal",
+        url: siteUrl + "#services"
+      }
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      item: {
+        "@type": "Service",
+        name: "GST Registration",
+        description: "Complete GST registration and compliance services",
+        url: siteUrl + "#services"
+      }
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      item: {
+        "@type": "Service",
+        name: "Legal Documentation",
+        description: "Professional legal documentation and affidavit services",
+        url: siteUrl + "#services"
+      }
+    }
+  ]
+})} />

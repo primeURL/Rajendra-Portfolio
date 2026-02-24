@@ -120,7 +120,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "testimonials.role3": "Freelancer",
 
     // Footer
-    "footer.copyright": "© 2023 TaxPro Solutions. All rights reserved.",
+    "footer.copyright": "© 2026 TaxPro Solutions. All rights reserved.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
   },
@@ -244,7 +244,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "testimonials.role3": "फ्रीलांसर",
 
     // Footer
-    "footer.copyright": "© 2023 TaxPro Solutions. सर्व हक्क राखीव.",
+    "footer.copyright": "© 2026 TaxPro Solutions. सर्व हक्क राखीव.",
     "footer.privacy": "गोपनीयता धोरण",
     "footer.terms": "सेवा अटी",
   },
@@ -368,7 +368,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "testimonials.role3": "फ्रीलांसर",
 
     // Footer
-    "footer.copyright": "© 2023 TaxPro Solutions. सर्वाधिकार सुरक्षित।",
+    "footer.copyright": "© 2026 TaxPro Solutions. सर्वाधिकार सुरक्षित।",
     "footer.privacy": "गोपनीयता नीति",
     "footer.terms": "सेवा की शर्तें",
   },
