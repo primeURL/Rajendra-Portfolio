@@ -5,9 +5,5 @@ Allow: /
 # Sitemap location
 Sitemap: https://rvlanjewar.in/sitemap.xml
 
-# Crawl-delay (optional, adjust as needed)
+# Crawl-delay
 Crawl-delay: 1
-
-# Disallow admin or private paths (if any)
-# Disallow: /admin/
-# Disallow: /private/

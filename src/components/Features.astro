@@ -4,19 +4,19 @@ const stats = [
     icon: "description",
     labelKey: "stats.formsFilled",
     label: "Forms Filled",
-    value: "1,000+",
+    value: "1,600+",
   },
   {
     icon: "sentiment_satisfied",
     labelKey: "stats.happyClients",
     label: "Happy Clients",
-    value: "500+",
+    value: "1500+",
   },
   {
     icon: "history",
     labelKey: "stats.yearsExperience",
     label: "Years Experience",
-    value: "10+",
+    value: "8+",
   },
 ];
 
@@ -24,6 +24,10 @@ const stats = [
 
 <!-- Stats Section -->
 <section id="about" class="py-8">
+  <div class="text-center max-w-3xl mx-auto mb-8">
+    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="stats.heading">Trusted by Thousands Across Maharashtra</h2>
+    <p class="text-slate-600 dark:text-slate-300 text-lg" data-i18n="stats.subheading">Over 8 years of excellence in online tax filing, government portal services, and form filling assistance</p>
+  </div>
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
     {stats.map((stat) => (
       <div class="flex flex-col items-center sm:items-start p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
