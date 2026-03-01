@@ -7,7 +7,7 @@ import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://prepspacedev.space', // Update with your actual domain
+  site: 'https://rvlanjewar.in', // Updated with your actual domain
   integrations: [
     react(),
     tailwind({
@@ -19,7 +19,7 @@ export default defineConfig({
       lastmod: new Date(),
     })
   ],
-  output: 'static',
+  output: 'server', // Changed from 'static' to 'hybrid' to support API routes
   adapter: node({
     mode: 'standalone'
   }),

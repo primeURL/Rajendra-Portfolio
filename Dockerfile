@@ -1,4 +1,4 @@
-# Multi-stage build for Astro landing page
+# Multi-stage build for Astro landing page with API support
 
 # Stage 1: Build the application
 FROM node:20-alpine AS builder
@@ -18,29 +18,30 @@ COPY . .
 
 ENV PUBLIC_SITE_URL=$PUBLIC_SITE_URL
 
-# Build the Astro site
+# Build the Astro site with SSR support
 RUN npm run build
 
-# Stage 2: Production image with nginx
-FROM nginx:alpine
+# Stage 2: Production image with Node.js (not nginx, since we need API support)
+FROM node:20-alpine
 
-# Install curl for healthchecks
-RUN apk add --no-cache curl
+WORKDIR /app
 
-# Remove default nginx config
-RUN rm /etc/nginx/conf.d/default.conf
+# Copy package files and install production dependencies only
+COPY package*.json ./
+RUN npm ci --only=production
 
-# Copy nginx configuration
-COPY nginx-docker.conf /etc/nginx/conf.d/default.conf
+# Copy built application from builder stage
+COPY --from=builder /app/dist ./dist
 
-# Copy built static files from builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Copy node_modules from builder (needed for nodemailer)
+COPY --from=builder /app/node_modules ./node_modules
 
-# Set proper permissions
-RUN chmod -R 755 /usr/share/nginx/html
+# Set environment variables
+ENV HOST=0.0.0.0
+ENV PORT=4321
 
-# Expose port 80
-EXPOSE 80
+# Expose port
+EXPOSE 4321
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start the Node.js server
+CMD ["node", "./dist/server/entry.mjs"]
