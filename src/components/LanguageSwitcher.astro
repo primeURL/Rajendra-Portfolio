@@ -2,7 +2,11 @@
 import { translations } from "../i18n/translations";
 ---
 
-<script id="i18n-data" type="application/json" set:html={JSON.stringify(translations)}></script>
+<script
+  id="i18n-data"
+  type="application/json"
+  set:html={JSON.stringify(translations)}
+/>
 
 <script is:inline>
   if (typeof window.i18nInitialized === "undefined") {
@@ -45,12 +49,14 @@ import { translations } from "../i18n/translations";
       });
 
       // Update placeholders
-      document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
-        var key = el.getAttribute("data-i18n-placeholder");
-        if (key && t[key] !== undefined) {
-          el.setAttribute("placeholder", t[key]);
-        }
-      });
+      document
+        .querySelectorAll("[data-i18n-placeholder]")
+        .forEach(function (el) {
+          var key = el.getAttribute("data-i18n-placeholder");
+          if (key && t[key] !== undefined) {
+            el.setAttribute("placeholder", t[key]);
+          }
+        });
 
       // Update html lang attribute
       document.documentElement.setAttribute("lang", lang);
@@ -60,10 +66,22 @@ import { translations } from "../i18n/translations";
         var btnLang = btn.getAttribute("data-lang-btn");
         if (btnLang === lang) {
           btn.classList.add("bg-primary", "text-white");
-          btn.classList.remove("text-slate-600", "dark:text-slate-300", "hover:text-primary", "hover:bg-slate-100", "dark:hover:bg-white/5");
+          btn.classList.remove(
+            "text-slate-600",
+            "dark:text-slate-300",
+            "hover:text-primary",
+            "hover:bg-slate-100",
+            "dark:hover:bg-white/5",
+          );
         } else {
           btn.classList.remove("bg-primary", "text-white");
-          btn.classList.add("text-slate-600", "dark:text-slate-300", "hover:text-primary", "hover:bg-slate-100", "dark:hover:bg-white/5");
+          btn.classList.add(
+            "text-slate-600",
+            "dark:text-slate-300",
+            "hover:text-primary",
+            "hover:bg-slate-100",
+            "dark:hover:bg-white/5",
+          );
         }
       });
 
@@ -85,31 +103,13 @@ import { translations } from "../i18n/translations";
 
     // Apply saved language on load
     var savedLang = getCurrentLang();
-    if (savedLang !== "en") {
-      // Wait for DOM to be ready
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", function () {
-          applyTranslations(savedLang);
-        });
-      } else {
+    // Wait for DOM to be ready
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () {
         applyTranslations(savedLang);
-      }
+      });
     } else {
-      // Still update button states for English
-      var updateButtons = function () {
-        document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
-          var btnLang = btn.getAttribute("data-lang-btn");
-          if (btnLang === "en") {
-            btn.classList.add("bg-primary", "text-white");
-            btn.classList.remove("text-slate-600", "dark:text-slate-300", "hover:text-primary", "hover:bg-slate-100", "dark:hover:bg-white/5");
-          }
-        });
-      };
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", updateButtons);
-      } else {
-        updateButtons();
-      }
+      applyTranslations(savedLang);
     }
 
     // Handle Astro View Transitions

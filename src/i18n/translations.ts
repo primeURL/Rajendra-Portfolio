@@ -12,7 +12,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     // Hero
     "hero.badge": "Certified Professional",
     "hero.title": "Professional <span class='text-primary'>Online Tax Filing</span> & Government Portal Services",
-    "hero.subtitle": "Expert assistance with Income Tax Return filing, TDS returns, UDISE+ data entry, Saral Portal, MahaIT scholarship, Shalarth & Sevarth payments, and MSCPune exam forms. Complete online solutions for all Maharashtra government portals and education services.",
+    "hero.subtitle": "Expert assistance with Income Tax Return filing, TDS returns, UDISE+ data entry, Saral Portal, MahaIT scholarship, Shalarth & Sevarth payments, and MSCEPune exam forms. Complete online solutions for all Maharashtra government portals and education services.",
     "hero.cta1": "Get Help Now",
     "hero.cta2": "View Services",
     "hero.whatsapp": "Chat on WhatsApp",
@@ -47,8 +47,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Services
     "services.badge": "Our Services",
-    "services.title": "Comprehensive Tax & Filing Services",
-    "services.subtitle": "From income tax returns to business registrations, we provide end-to-end solutions for all your documentation needs.",
+    "services.title": "Expert Tax Filing and Digital Portal Services",
+    "services.subtitle": "Accurate Income Tax returns, Maharashtra educational portals (UDISE+, Saral), and government exam form management with end-to-end security.",
     "services.itrTitle": "Income Tax Return Filing Services Online",
     "services.itrDesc": "Complete ITR filing for individuals, salaried employees, freelancers, and businesses. We ensure maximum deductions and full compliance.",
     "services.itrItem1": "Online PAN Card & TAN Card Application Services",
@@ -76,7 +76,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "services.gstDesc": "Complete GST compliance including registration, return filing, and reconciliation services.",
     "services.gstItem1": "Shalarth Online Payment Processing Services",
     "services.gstItem2": "Sevarth Online Payment & Salary Services",
-    "services.consultTitle": "MSCPune Exam Form Filling Services Online",
+    "services.consultTitle": "MSCEPune Exam Form Filling Services Online",
     "services.consultDesc": "One-on-one expert consultation for tax planning, investment advice, and financial decision-making.",
     "services.consultItem1": "Shishruti Exam Form Filling Online (4th & 7th Standard)",
     "services.consultItem2": "TET Exam Form Filling & Registration Services",
@@ -112,7 +112,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "contact.optionMahaIT": "MahaIT Scholarship",
     "contact.optionShalarth": "Shalarth Online Payment",
     "contact.optionSevarth": "Sevarth Online Payment",
-    "contact.optionMSCPune": "MSCPune Exam Forms",
+    "contact.optionMSCEPune": "MSCEPune Exam Forms",
     "contact.optionGST": "GST Registration",
     "contact.optionBiz": "Business Registration",
     "contact.optionOther": "Other Consultation",
@@ -135,6 +135,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "footer.copyright": "© 2026 TaxPro Solutions. All rights reserved.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
+    "footer.visitors": "Website Visitors:",
   },
 
   mr: {
@@ -148,7 +149,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     // Hero
     "hero.badge": "प्रमाणित व्यावसायिक",
     "hero.title": "व्यावसायिक <span class='text-primary'>ऑनलाइन कर फाइलिंग</span> आणि सरकारी पोर्टल सेवा",
-    "hero.subtitle": "आयकर रिटर्न भरणे, TDS रिटर्न, UDISE+ डेटा एंट्री, सरळ पोर्टल, महाआयटी शिष्यवृत्ती, शालार्थ आणि सेवार्थ पेमेंट, आणि MSCPune परीक्षा फॉर्मसाठी तज्ञ सहाय्य. सर्व महाराष्ट्र सरकारी पोर्टल आणि शिक्षण सेवांसाठी संपूर्ण ऑनलाइन उपाय.",
+    "hero.subtitle": "आयकर रिटर्न भरणे, TDS रिटर्न, UDISE+ डेटा एंट्री, सरळ पोर्टल, महाआयटी शिष्यवृत्ती, शालार्थ आणि सेवार्थ पेमेंट, आणि MSCEPune परीक्षा फॉर्मसाठी तज्ञ सहाय्य. सर्व महाराष्ट्र सरकारी पोर्टल आणि शिक्षण सेवांसाठी संपूर्ण ऑनलाइन उपाय.",
     "hero.cta1": "आता मदत मिळवा",
     "hero.cta2": "सेवा पहा",
     "hero.whatsapp": "WhatsApp वर चॅट करा",
@@ -158,7 +159,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.profileDesignation": "कर फाइलिंग आणि सरकारी पोर्टल तज्ञ",
     "hero.profileExperience": "8+ वर्षांचा अनुभव",
     "hero.aboutTitle": "आर व्ही लांजेवार बद्दल",
-    "hero.aboutText": "आयकर फाइलिंग, TDS रिटर्न आणि सरकारी पोर्टल सेवांमध्ये 8 वर्षांपेक्षा जास्त तज्ञता असलेले व्यावसायिक कर सल्लागार. UDISE+, सरळ, महाआयटी आणि शिक्षण सेवांसह सर्व सरकारी पोर्टलसाठी अचूक, वेळेवर आणि सुरक्षित ऑनलाइन दस्तऐवजीकरणासह संपूर्ण महाराष्ट्रातील 1500+ ग्राहकांना यशस्वीपणे सेवा दिली.",
+    "hero.aboutText": "आयकर फाइलिंग, TDS रिटर्न आणि सरकारी पोर्टल सेवांमध्ये 8 वर्षांपेक्षा जास्त तज्ञता असलेले व्यावसायिक कर सल्लागार. UDISE+, सरळ, महाआयटी आणि शिक्षण सेवासह सर्व सरकारी पोर्टलसाठी अचूक, वेळेवर आणि सुरक्षित ऑनलाइन दस्तऐजीकरणासह संपूर्ण महाराष्ट्रातील 1500+ ग्राहकांना यशस्वीपणे सेवा दिली.",
     "hero.imageTitle": "विश्वासार्ह तज्ञता",
     "hero.imageSubtitle": "२०१३ पासून व्यक्ती आणि व्यवसायांना मदत",
     "hero.floatingLabel": "सत्यापित फाइलिंग",
@@ -183,8 +184,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Services
     "services.badge": "आमच्या सेवा",
-    "services.title": "सर्वसमावेशक कर आणि फाइलिंग सेवा",
-    "services.subtitle": "आयकर रिटर्नपासून व्यवसाय नोंदणीपर्यंत, आम्ही तुमच्या सर्व कागदपत्रांच्या गरजांसाठी संपूर्ण उपाय प्रदान करतो.",
+    "services.title": "तज्ञ कर फाइलिंग आणि डिजिटल पोर्टल सेवा",
+    "services.subtitle": "आयकर परतावा, महाराष्ट्र शैक्षणिक पोर्टल (UDISE+, सरल) आणि सरकारी परीक्षा फॉर्मचे अचूक आणि सुरक्षित व्यवस्थापन.",
     "services.itrTitle": "आयकर रिटर्न भरणे ऑनलाइन सेवा",
     "services.itrDesc": "व्यक्ती, पगारदार कर्मचारी, फ्रीलांसर आणि व्यवसायांसाठी संपूर्ण ITR फाइलिंग. आम्ही जास्तीत जास्त वजावट आणि पूर्ण अनुपालन सुनिश्चित करतो.",
     "services.itrItem1": "ऑनलाइन पॅन कार्ड आणि टॅन कार्ड अर्ज सेवा",
@@ -198,7 +199,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "services.saralItem1": "विद्यार्थी पोर्टल नोंदणी आणि सेवा",
     "services.saralItem2": "शिक्षक पोर्टल ऑनलाइन सेवा",
     "services.saralItem3": "शाळा पोर्टल व्यवस्थापन सेवा",
-    "services.saralItem4": "शाळेशी संबंधित ऑनलाइन काम आणि दस्तऐवजीकरण",
+    "services.saralItem4": "शाळेशी संबंधित ऑनलाइन काम आणि दस्तऐजीकरण",
     "services.legalTitle": "महाआयटी पोर्टल शिष्यवृत्ती सेवा ऑनलाइन",
     "services.legalDesc": "कायदेशीर कागदपत्रे, प्रतिज्ञापत्रे, करार आणि नोंदणी कागदपत्रांसाठी व्यावसायिक सहाय्य.",
     "services.legalItem1": "विद्यार्थी शिष्यवृत्ती अर्ज आणि प्रक्रिया ऑनलाइन",
@@ -212,7 +213,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "services.gstDesc": "नोंदणी, रिटर्न फाइलिंग आणि सामंजस्य सेवांसह संपूर्ण GST अनुपालन.",
     "services.gstItem1": "शालार्थ ऑनलाइन पेमेंट प्रक्रिया सेवा",
     "services.gstItem2": "सेवार्थ ऑनलाइन पेमेंट आणि पगार सेवा",
-    "services.consultTitle": "MSCPune परीक्षा फॉर्म भरणे सेवा ऑनलाइन",
+    "services.consultTitle": "MSCEPune परीक्षा फॉर्म भरणे सेवा ऑनलाइन",
     "services.consultDesc": "कर नियोजन, गुंतवणूक सल्ला आणि आर्थिक निर्णयांसाठी एक-एक तज्ञ सल्लामसलत.",
     "services.consultItem1": "शिष्यवृत्ती परीक्षा फॉर्म ऑनलाइन भरणे (४थी आणि ७वी इयत्ता)",
     "services.consultItem2": "TET परीक्षा फॉर्म भरणे आणि नोंदणी सेवा",
@@ -228,7 +229,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "contact.emailTitle": "ईमेल करा",
     "contact.emailAddress": "rvlanjewar.online@gmail.com",
     "contact.emailResponse": "२४ तासांत प्रतिसाद",
-    "contact.officeTitle": "कार्यालयाला भेट द्या",
+    "contact.officeTitle": "कार्यालयला भेट द्या",
     "contact.officeAddress": "वसुंधरा नगर, जुन्या बसस्थानकाजवळ, नागभीड",
     "contact.whatsapp": "WhatsApp वर चॅट करा",
     "contact.formTitle": "संदेश पाठवा",
@@ -248,7 +249,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "contact.optionMahaIT": "महाआयटी शिष्यवृत्ती",
     "contact.optionShalarth": "शालार्थ ऑनलाइन पेमेंट",
     "contact.optionSevarth": "सेवार्थ ऑनलाइन पेमेंट",
-    "contact.optionMSCPune": "MSCPune परीक्षा फॉर्म",
+    "contact.optionMSCEPune": "MSCEPune परीक्षा फॉर्म",
     "contact.optionGST": "GST नोंदणी",
     "contact.optionBiz": "व्यवसाय नोंदणी",
     "contact.optionOther": "इतर सल्लामसलत",
@@ -271,6 +272,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "footer.copyright": "© 2026 TaxPro Solutions. सर्व हक्क राखीव.",
     "footer.privacy": "गोपनीयता धोरण",
     "footer.terms": "सेवा अटी",
+    "footer.visitors": "वेबसाइटला भेट देणारे:",
   },
 
   hi: {
@@ -284,7 +286,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     // Hero
     "hero.badge": "प्रमाणित पेशेवर",
     "hero.title": "पेशेवर <span class='text-primary'>ऑनलाइन टैक्स फाइलिंग</span> और सरकारी पोर्टल सेवाएं",
-    "hero.subtitle": "आयकर रिटर्न फाइलिंग, TDS रिटर्न, UDISE+ डेटा एंट्री, सरल पोर्टल, महाआईटी छात्रवृत्ति, शालार्थ और सेवार्थ भुगतान, और MSCPune परीक्षा फॉर्म के लिए विशेषज्ञ सहायता। सभी महाराष्ट्र सरकारी पोर्टल और शिक्षा सेवाओं के लिए संपूर्ण ऑनलाइन समाधान।",
+    "hero.subtitle": "आयकर रिटर्न फाइलिंग, TDS रिटर्न, UDISE+ डेटा एंट्री, सरल पोर्टल, महाआईटी छात्रवृत्ति, शालार्थ और सेवार्थ भुगतान, और MSCEPune परीक्षा फॉर्म के लिए विशेषज्ञ सहायता। सभी महाराष्ट्र सरकारी पोर्टल और शिक्षा सेवाओं के लिए संपूर्ण ऑनलाइन समाधान।",
     "hero.cta1": "अभी मदद लें",
     "hero.cta2": "सेवाएं देखें",
     "hero.whatsapp": "WhatsApp पर चैट करें",
@@ -319,8 +321,8 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Services
     "services.badge": "हमारी सेवाएं",
-    "services.title": "व्यापक कर और फाइलिंग सेवाएं",
-    "services.subtitle": "आयकर रिटर्न से लेकर व्यवसाय पंजीकरण तक, हम आपकी सभी दस्तावेज़ आवश्यकताओं के लिए संपूर्ण समाधान प्रदान करते हैं।",
+    "services.title": "विशेषज्ञ टैक्स फाइलिंग और डिजिटल पोर्टल सेवाएं",
+    "services.subtitle": "आयकर रिटर्न, महाराष्ट्र शैक्षिक पोर्टल (UDISE+, सरल) और सरकारी परीक्षा फॉर्मों का सटीक और सुरक्षित प्रबंधन।",
     "services.itrTitle": "आयकर रिटर्न फाइलिंग सेवाएं ऑनलाइन",
     "services.itrDesc": "व्यक्तियों, वेतनभोगी कर्मचारियों, फ्रीलांसरों और व्यवसायों के लिए संपूर्ण ITR फाइलिंग। हम अधिकतम कटौती और पूर्ण अनुपालन सुनिश्चित करते हैं।",
     "services.itrItem1": "ऑनलाइन पैन कार्ड और टैन कार्ड आवेदन सेवाएं",
@@ -348,7 +350,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "services.gstDesc": "पंजीकरण, रिटर्न फाइलिंग और सामंजस्य सेवाओं सहित संपूर्ण GST अनुपालन।",
     "services.gstItem1": "शालार्थ ऑनलाइन भुगतान प्रसंस्करण सेवाएं",
     "services.gstItem2": "सेवार्थ ऑनलाइन भुगतान और वेतन सेवाएं",
-    "services.consultTitle": "MSCPune परीक्षा फॉर्म भरने की सेवाएं ऑनलाइन",
+    "services.consultTitle": "MSCEPune परीक्षा फॉर्म भरने की सेवाएं ऑनलाइन",
     "services.consultDesc": "कर नियोजन, निवेश सलाह और वित्तीय निर्णय लेने के लिए एक-एक विशेषज्ञ परामर्श।",
     "services.consultItem1": "शिष्यवृत्ति परीक्षा फॉर्म ऑनलाइन भरना (4वीं और 7वीं कक्षा)",
     "services.consultItem2": "TET परीक्षा फॉर्म भरना और पंजीकरण सेवाएं",
@@ -384,7 +386,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "contact.optionMahaIT": "महाआईटी छात्रवृत्ति",
     "contact.optionShalarth": "शालार्थ ऑनलाइन भुगतान",
     "contact.optionSevarth": "सेवार्थ ऑनलाइन भुगतान",
-    "contact.optionMSCPune": "MSCPune परीक्षा फॉर्म",
+    "contact.optionMSCEPune": "MSCEPune परीक्षा फॉर्म",
     "contact.optionGST": "GST पंजीकरण",
     "contact.optionBiz": "व्यवसाय पंजीकरण",
     "contact.optionOther": "अन्य परामर्श",
@@ -401,11 +403,13 @@ export const translations: Record<Lang, Record<string, string>> = {
     "testimonials.role2": "वेतनभोगी पेशेवर",
     "testimonials.review3": "\"उत्कृष्ट GST पंजीकरण और अनुपालन सहायता। उन्होंने पूरी प्रक्रिया को सरल और तनाव-मुक्त बना दिया। मैं अपनी सभी फाइलिंग के लिए उन पर पूरा भरोसा करता हूं।\"",
     "testimonials.name3": "अमित मेहता",
-    "testimonials.role3": "फ्रीलांसर",
+    "testimonials.role3": "Freelancer",
 
     // Footer
     "footer.copyright": "© 2026 TaxPro Solutions. सर्वाधिकार सुरक्षित।",
     "footer.privacy": "गोपनीयता नीति",
     "footer.terms": "सेवा की शर्तें",
+    "footer.visitors": "वेबसाइट आगंतुक:",
   },
 };
+
