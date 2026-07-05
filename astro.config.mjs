@@ -5,6 +5,8 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import node from '@astrojs/node';
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rvlanjewar.in', // Updated with your actual domain
@@ -21,9 +23,7 @@ export default defineConfig({
     })
   ],
   output: 'server', // Changed from 'static' to 'hybrid' to support API routes
-  adapter: node({
-    mode: 'standalone'
-  }),
+  adapter: cloudflare(),
   build: {
     inlineStylesheets: 'auto',
     assets: '_assets'
