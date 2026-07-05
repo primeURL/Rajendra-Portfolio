@@ -1,0 +1,18 @@
+{
+  "name": "Tax Solutions - Online Tax Filing & Government Portal Services",
+  "short_name": "Tax Solutions",
+  "description": "Professional online income tax return filing, TDS returns, UDISE+ data entry, and Maharashtra government portal services.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#135bec",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

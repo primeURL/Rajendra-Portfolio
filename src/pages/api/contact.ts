@@ -40,7 +40,7 @@ export const POST: APIRoute = async ({ request }) => {
             <p><strong>Message:</strong></p>
             <p style="background-color: white; padding: 15px; border-radius: 4px;">${message}</p>
           </div>
-          <p style="color: #64748b; font-size: 12px;">Submitted from TaxPro Solutions website</p>
+          <p style="color: #64748b; font-size: 12px;">Submitted from Tax Solutions website</p>
         </div>
       `,
     };

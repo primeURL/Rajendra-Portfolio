@@ -15,8 +15,9 @@ export default defineConfig({
     }),
     sitemap({
       changefreq: 'weekly',
-      priority: 0.7,
+      priority: 1.0,
       lastmod: new Date(),
+      filter: (page) => !page.includes('/api'),
     })
   ],
   output: 'server', // Changed from 'static' to 'hybrid' to support API routes
